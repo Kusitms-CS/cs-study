@@ -35,7 +35,6 @@ class Node:
 3. 이중 연결 리스트 
 
 아래의 그림을 보면 이해가 쉽다. 
-<img src="https://velog.velcdn.com/images/lsy000626/post/1dc97e6a-2341-4c8b-9933-fd804d9edb73/image.png" width="300" height="200">
 ![연결리스트의 종류](https://velog.velcdn.com/images/lsy000626/post/1dc97e6a-2341-4c8b-9933-fd804d9edb73/image.png)
 
 
