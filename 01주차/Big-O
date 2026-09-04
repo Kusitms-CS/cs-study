@@ -1,0 +1,87 @@
+
+# 1주차 CS 스터디 자료구조 / 시간복잡도
+
+## 공통 키워드 
+
+- Big-O
+알고리즘의 성능을 수학적으로 표기해주는 표기법이다. 
+여기서 시간 복잡성 & 공간 복잡성을 다룰 때 크게 Omega(최선의 시나리오), Theta(평균), Omicron(최악의 시나리오)을 의미. Big-O의 O는 Omicron(최악의 시나리오)을 의미한다. 
+
+  - O(n)
+```python
+def solution(n):
+	for i in range(n):
+	print(i)
+```
+
+  - O(n^2)
+```python
+def solution(n):
+	for i in range(n):
+		for j in range(n):
+				print(i, j)
+```
+
+  - O(n^3)
+```python
+def solution(n):
+	for i in range(n):
+		for j in range(n):
+				for m in range(n):
+					print(i, j, m)
+```
+
+  - O(nm)
+```python
+def solution(n, m):
+	for i in range(n):
+		for j in range(m):
+				print(i, j)
+```
+
+  - O(1)
+```python
+def solution(n):
+	return n + n
+```
+
+  - O(log n)
+```python
+# 입력 크기 n을 계속 2로 나누어 1이 될 때까지 반복
+def log_n_example(n):
+    count = 0
+    while n > 1:
+        n = n // 2
+        count += 1
+    return count
+```
+
+  - O(2^n) → 재귀함수… **** 
+```python
+def solution(n):
+    # 2의 n제곱 값을 계산
+    total_iterations = 2 ** n 
+    
+    count = 0
+    # 0부터 (2^n - 1)번까지 총 2^n번 반복
+    while count < total_iterations:
+        count += 1
+        
+    print(count) 
+
+solution(5) # input 양식까지 있는 경우. 
+```
+
+  - O(m^n) → 재귀함수… **** 
+```python
+def solution(n, m):
+    total_iterations = m ** n 
+    
+    count = 0
+    while count < total_iterations:
+        count += 1
+        
+    print(count) 
+```
+
+
