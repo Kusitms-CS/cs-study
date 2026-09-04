@@ -1,0 +1,37 @@
+
+# 1주차 CS 스터디 자료구조 / 시간복잡도
+
+## 공통 키워드
+
+- Queue
+큐는 데이터가 들어가는 곳과 나가는 곳이 한 곳으로 정해져있는 자료 구조를 말한다. 즉, 선입선출의 구조.
+
+- 큐의 특징
+1. FIFO 혹은 LILO 의 구조.
+2. 데이터 삽입은 Rear(뒤)에서만 일어나고, 삭제는 Front(앞)에서만 이루어진다. 
+3. 데이터 삽입과 삭제 연산 시간복잡도는 O(1)로 매우 빠름.
+
+![큐의 구조](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FFn1qW%2FbtrtRXUuu2O%2FAAAAAAAAAAAAAAAAAAAAAHdbmrnW4v5NvHyv4J7ADDDx6HtJTd1gIjcwrHMtls9N%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1790780399%26allow_ip%3D%26allow_referer%3D%26signature%3DetptIijnzmzgHT2rMT0F5p8SWGc%253D)
+
+
+- Queue의 기본 연산
+1. Enqueue: 큐의 뒤쪽에 데이터를 추가.
+2. Dequeue: 큐의 앞쪽에서 데이터를 꺼내고 삭제 
+3. Peek: 삭제하지 않고 앞쪽에 있는 데이터를 확인 
+
+- stack 문제 큐로 풀어보기 (같은 숫자는 싫어 LV.1)
+```python
+from collections import deque
+
+def solution(arr):
+    a = deque()
+    last_add = None
+    
+    for val in arr:
+        if len(a) == 0 or val != last_add:
+            a.append(val)
+            last_add = val 
+    
+    return list(a)
+
+```
