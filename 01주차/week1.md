@@ -92,10 +92,6 @@
 
 **FIFO(First In First Out)** 구조. 먼저 넣은 데이터가 먼저 나옴.
 
-| 연산 | 설명 | 시간복잡도 |
-|---|---|---|
-| `enqueue` | 삽입 | `O(1)` |
-| `dequeue` | 삭제 | `O(1)`* |
 
 \* 배열로 구현 시 앞쪽 삭제는 `O(n)`이 될 수 있어, 보통 **원형 큐(circular buffer)** 나 연결 리스트로 구현해 `O(1)`을 달성한다.
 
@@ -221,11 +217,6 @@ map.get("apple");      // 같은 방식으로 인덱스 계산 → 바로 조회
 
 멀티스레드 환경에서 안전하게 사용할 수 있도록 만든 `HashMap`의 동시성 버전.
 
-| 구현체 | 락 방식 | 동시 접근 |
-|---|---|---|
-| `Hashtable` / `Collections.synchronizedMap()` | Map 전체에 하나의 락 | 한 번에 한 스레드만 접근 가능 (병목) |
-| `ConcurrentHashMap` (Java 7 이전) | Segment 단위로 분할한 락 (Lock Striping) | Segment 개수만큼 동시 접근 가능 |
-| `ConcurrentHashMap` (Java 8 이후) | 버킷(노드) 단위 `CAS` + `synchronized` | 훨씬 세밀한 단위로 동시 접근 가능 |
 
 - `HashMap`은 `null` key/value를 허용하지만, `ConcurrentHashMap`은 **허용하지 않는다** (여러 스레드가 동시에 접근할 때 `null`이 "값이 없다"는 뜻인지 "아직 다른 스레드가 쓰는 중"이라는 뜻인지 구분할 수 없기 때문).
 - 활용 예: 여러 요청이 동시에 캐시나 카운터를 읽고 쓰는 서버 환경 (조회수 카운트, 세션 캐시 등)
