@@ -1,7 +1,7 @@
 # 1주차 - 자료구조 / 시간복잡도
 
 ## 공통 키워드
-- Big-O
+- Big-Of    
 - Array
 - LinkedList
 - Stack
