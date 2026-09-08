@@ -10,6 +10,27 @@
 
 ---
 
+## 👥 참여 멤버
+
+| 이름 | 개인 브랜치 |
+| --- | --- |
+| 유용선 | `yongseon-yoo` |
+| 정푸름 | `pureum-jung` |
+| 박유민 | `yumin-park` |
+| 성태경 | `taegyeong-sung` |
+| 이경준 | `gyeongjun-lee` |
+| 박윤지 | `yunji-park` |
+| 김예원 | `yewon-kim` |
+| 임세윤 | `seyun-lim` |
+| 이예나 | `yena-lee` |
+| 이재현 | `jaehyeon-lee` |
+| 이윤지 | `yunji-lee` |
+| 고경수 | `gyeongsu-ko` |
+| 강서현 | `seohyeon-kang` |
+| 이준교 | `junkyo-lee` |
+
+---
+
 # 📚 진행 방식
 
 ## 1. 주제 학습 및 PR 작성
@@ -17,6 +38,8 @@
 매주 스터디장이 해당 회차의 **주제와 필수 학습 키워드**를 공유합니다.
 
 스터디원은 해당 키워드를 중심으로 개별 학습을 진행한 뒤, 학습한 내용을 정리하여 **GitHub Organization에 PR을 작성**합니다.
+
+각자 [Issue](../../issues)로 등록된 해당 주차 주제를 확인하고, 본인의 개인 브랜치(`참여 멤버` 표 참고)에서 학습 내용을 정리한 뒤 `main`으로 PR을 올리고, 리뷰가 끝나면 머지합니다.
 
 ### 1~7주차
 
