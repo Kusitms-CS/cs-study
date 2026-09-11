@@ -27,7 +27,7 @@
 | 이윤지 | `yunji-lee` |
 | 고경수 | `gyeongsu-ko` |
 | 강서현 | `seohyeon-kang` |
-| 이준교 | `junkyo-lee` |
+| 이준교 | `joonkyo-lee` |
 
 ---
 
