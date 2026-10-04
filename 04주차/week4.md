@@ -316,6 +316,6 @@ HTTP 요청/응답
 
 - [RFC 9293 — Transmission Control Protocol](https://www.rfc-editor.org/rfc/rfc9293.html): TCP 연결 수립·종료, 상태와 데이터 전송
 - [RFC 1034 — Domain Names: Concepts and Facilities](https://www.rfc-editor.org/rfc/rfc1034.html): DNS의 구조와 이름 해석
-- [RFC 8499 — DNS Terminology](https://www.rfc-editor.org/rfc/rfc8499.html): 재귀·반복 조회 용어
+- [RFC 9499 — DNS Terminology](https://www.rfc-editor.org/rfc/rfc9499.html): 재귀·반복 조회 용어
 - [Linux `listen(2)` 매뉴얼](https://man7.org/linux/man-pages/man2/listen.2.html): 리스닝 Socket과 backlog
 - [Linux `socket(7)` 매뉴얼](https://man7.org/linux/man-pages/man7/socket.7.html): Socket 옵션과 타임아웃
