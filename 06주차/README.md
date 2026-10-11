@@ -1,5 +1,13 @@
 # 6주차 - Database
 
+## 정리 노트
+
+- [RDB / NoSQL과 키 (RDB / NoSQL / PK / FK)](./rdb-nosql.md)
+- [정규화와 JOIN](./normalization-join.md)
+- [Index / B+Tree](./index-btree.md)
+- [쿼리 최적화 (Composite·Covering Index / Query Plan / EXPLAIN / Query 최적화)](./query-optimization.md)
+- [참고 자료](./references.md)
+
 ## 공통 키워드
 - RDB/NoSQL
 - PK/FK
