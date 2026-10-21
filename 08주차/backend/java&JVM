@@ -1,0 +1,71 @@
+# 8주차 - Java / JVM
+
+## 키워드
+1. JVM / JRE / JDK
+JVM (Java Virtual Machine): 자바 바이트코드(.class)를 해당 OS에 맞는 기계어로 해석하고 실행하는 가상 머신입니다. OS 종속성을 없애 "Write Once, Run Anywhere"를 가능하게 합니다.
+
+JRE (Java Runtime Environment): JVM + 자바 핵심 클래스 라이브러리(rt.jar 등). 자바 프로그램을 실행하기 위해 필요한 최소 환경입니다.
+
+JDK (Java Development Kit): JRE + 개발 도구(컴파일러 javac, 디버거 등). 자바 애플리케이션을 개발하기 위한 전체 패키지입니다. (포함 관계: JDK > JRE > JVM)
+
+2. Generic (제네릭)
+정의: 클래스, 인터페이스, 메서드에서 사용할 데이터 타입을 컴파일 시점에 파라미터 형태로 지정하는 기능입니다.
+
+핵심 역할: 컴파일 타임에 엄격한 타입 검사를 수행하여 타입 안정성(Type Safety)을 높이고, 불필요한 명시적 형변환(Type Casting) 비용을 제거합니다.
+
+3. Collection (컬렉션)
+정의: 다수의 데이터 요소를 효율적으로 저장, 검색, 수정, 삭제할 수 있도록 제공하는 자바의 데이터 구조 프레임워크입니다.
+
+주요 인터페이스:
+
+List: 순서가 유지되고 중복을 허용합니다. (예: ArrayList, LinkedList)
+
+Set: 순서를 보장하지 않고 중복을 허용하지 않습니다. (예: HashSet, TreeSet)
+
+Queue: FIFO(선입선출) 구조로 데이터를 처리합니다. (예: ArrayDeque, PriorityQueue)
+
+(참고: Map은 Key-Value 쌍 구조로 Collection 인터페이스를 직접 상속하진 않으나, 넓은 의미의 컬렉션 프레임워크에 포함됩니다.)
+
+4. Exception (예외)
+정의: 프로그램 실행 중(Runtime) 발생할 수 있는 비정상적인 상황을 객체로 표현한 것입니다.
+
+구분:
+
+Checked Exception: 컴파일 시점에 예외 처리가 필수적으로 강제되는 예외입니다. (예: IOException, SQLException)
+
+Unchecked Exception (RuntimeException): 컴파일 시점에 예외 처리가 강제되지 않으며, 개발자의 논리적 오류로 주로 발생하는 예외입니다. (예: NullPointerException, IndexOutOfBoundsException)
+
+5. JVM Architecture (JVM 구조)
+JVM은 크게 세 가지 주요 부분으로 구성되어 실행됩니다.
+
+Class Loader Subsystem: 클래스 파일을 읽어 메모리에 동적으로 적재하는 영역.
+
+Runtime Data Area (메모리 영역):
+
+Method Area / Metaspace: 클래스 구조, 메서드 정보, static 변수 저장.
+
+Heap Area: new 키워드로 생성된 모든 객체 인스턴스가 저장되는 공간 (GC의 대상).
+
+Stack Area: 스레드마다 생성되며 메서드 호출 시 프레임 단위로 지역 변수와 매개변수를 저장.
+
+PC Register: 현재 스레드가 실행 중인 JVM 명령 주소를 저장.
+
+Native Method Stack: C/C++ 등 타 언어로 작성된 네이티브 코드를 다루는 공간.
+
+Execution Engine (실행 엔진): 메모리에 로드된 바이트코드를 실제로 실행하는 주체 (Interpreter, JIT Compiler, Garbage Collector).
+
+6. Class Loader (클래스 로더)
+정의: 컴파일된 자바 바이트코드(.class)를 동적으로 읽어와 JVM 메모리(Runtime Data Area)에 로드하는 시스템입니다.
+
+동작 단계:
+
+Loading: 바이트코드를 읽어 메모리에 적재.
+
+Linking: 코드의 유효성을 검증(Verification)하고, static 변수의 메모리를 준비(Preparation)하며, 심볼릭 참조를 실제 메모리 주소로 해독(Resolution).
+
+Initialization: static 변수와 static 블록을 초기화.
+
+7. GC (Garbage Collection, 가비지 컬렉션)
+정의: JVM의 Heap 메모리에서 어떠한 참조도 받지 않는 더 이상 사용되지 않는 객체(Unreachable Object)를 자동으로 탐지하여 메모리에서 해제하는 프로세스입니다.
+
+특징: 개발자가 명시적으로 메모리를 해제할 필요가 없게 만들어 메모리 누수를 방지합니다. 동작 과정에서 애플리케이션 실행이 일시 중지되는 Stop-The-World (STW) 현상이 발생하므로, 이를 최소화하기 위한 다양한 GC 알고리즘(G1, ZGC 등)이 개발되어 사용됩니다.
