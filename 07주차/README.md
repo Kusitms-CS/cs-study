@@ -1,5 +1,14 @@
 # 7주차 - Web Security / 인증
 
+## 정리 노트
+
+- [SOP / CORS](./sop-cors.md)
+- [XSS / CSRF](./xss-csrf.md)
+- [인증과 상태 유지 (인증/인가 / Cookie·Session / JWT)](./auth-session-jwt.md)
+- [OAuth](./oauth.md)
+- [Spring Security와 토큰 처리 (Spring Security / JWT 검증 / Refresh Token / OAuth 서버 처리)](./spring-security-token.md)
+- [참고 자료](./references.md)
+
 ## 공통 키워드
 - SOP
 - CORS
